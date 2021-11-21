@@ -1,0 +1,9 @@
+name: Lobbysystem Wolfuscht
+version: '${project.version}'
+main: lobbysystem.wolfuscht.lobbysystemwolfuscht.LobbysystemWolfuscht
+api-version: 1.17
+authors: [CheckerPhil]
+description: Lobbysystem
+commands:
+    setwarp:
+
