@@ -32,22 +32,22 @@ public class SetWarpCommand implements CommandExecutor {
                 try {
                     material = Material.valueOf(args[1].toUpperCase(Locale.ROOT));
                 }catch (Exception e){
-                    p.sendMessage(prefix + ChatColor.YELLOW + args[0].toUpperCase(Locale.ROOT) + ChatColor.RED + " ist kein gültiges Material.");
+                    p.sendMessage(prefix + ChatColor.YELLOW + args[0].toUpperCase(Locale.ROOT) + ChatColor.RED + " is no accepted Material.");
                     return true;
                 }
                 try {
                     slot = Integer.parseInt(args[2]);
                 }catch (Exception e){
-                    p.sendMessage(prefix + ChatColor.RED + "Slot muss eine Zahl(Int) sein.");
+                    p.sendMessage(prefix + ChatColor.RED + "slot has to be a number(INT).");
                     return true;
                 }
                 LobbySystemWS.getTeleportUtils().save(name, material, slot, p.getLocation());
-                p.sendMessage(prefix + ChatColor.GREEN + "Warp erfolgreich gesetzt.");
+                p.sendMessage(prefix + ChatColor.GREEN + "Succesfully set warp.");
             }else {
-                p.sendMessage(prefix + ChatColor.RED + "Benutze: " + ChatColor.YELLOW + "/setwarp <Name> <Material> <Slot>");
+                p.sendMessage(prefix + ChatColor.RED + "Please use: " + ChatColor.YELLOW + "/setwarp <Name> <Material> <Slot>");
             }
         }else {
-            p.sendMessage(prefix + "Nicht genügend Rechte.");
+            p.sendMessage(prefix + "Not enough Permissions.");
         }
         return false;
     }
