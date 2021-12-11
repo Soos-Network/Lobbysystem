@@ -20,9 +20,9 @@ public class LobbyAPI {
 
         player.getInventory().setItem(0, Creator.itemcreator(Material.COMPASS, "§8» ┃ §9Teleporter", 1, (short)0, null));
         player.getInventory().setItem(2, Creator.itemcreator(Material.GOLDEN_AXE, "§8» ┃ §6PvP", 1, (short)0, null));
-        player.getInventory().setItem(4, Creator.itemcreator(Material.BARRIER, "§fKein Gadget ausgewählt", 1, (short)0, null));
+        player.getInventory().setItem(4, Creator.itemcreator(Material.BARRIER, "§fNo Gadgets choosed", 1, (short)0, null));
         player.getInventory().setItem(6, Creator.itemcreator(Material.CAKE, "§8» ┃ §5Gadgets", 1, (short)0, null));
-        player.getInventory().setItem(8, Creator.itemcreator(Material.POTION, "§8» ┃ §cSpieler verstecken", 1, (short)0, null));
+        player.getInventory().setItem(8, Creator.itemcreator(Material.POTION, "§8» ┃ §cHide Players", 1, (short)0, null));
 
     }
 
@@ -35,7 +35,7 @@ public class LobbyAPI {
         o.setDisplaySlot(DisplaySlot.SIDEBAR);
         o.setDisplayName("§7 §8- §c§lWOLFSUCHT §8- §7");
         o.getScore("§9§8§9§7§e§7").setScore(18);
-        o.getScore("§7 §8┃ §7Rang").setScore(17);
+        o.getScore("§7 §8┃ §7Rank").setScore(17);
         if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("default")) {
             o.getScore("§7  §8» §9Spieler").setScore(16);
         } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("Prime")) {
@@ -65,7 +65,7 @@ public class LobbyAPI {
         } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("content")) {
             o.getScore("§7  §8» §cContent").setScore(16);
         } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("leitung")) {
-            o.getScore("§7  §8» §4Leitung").setScore(16);
+            o.getScore("§7  §8» §4Lead").setScore(16);
         } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("admin")) {
             o.getScore("§7  §8» §4Admin").setScore(16);
         }
@@ -73,10 +73,10 @@ public class LobbyAPI {
         o.getScore("§7 §8┃ §7Coins").setScore(11);
         o.getScore("§7  §8» §6" + CoinsSystem.getApi().getCoins(player)).setScore(10);
         o.getScore("§8§9").setScore(9);
-        o.getScore("§7 §8┃ §7Spieler").setScore(8);
+        o.getScore("§7 §8┃ §7Players").setScore(8);
         o.getScore("§7  §8» §c"  + Bukkit.getServer().getOnlinePlayers().size()).setScore(7);
         o.getScore("§8§9§f§m").setScore(6);
-        o.getScore("§7 §8┃ §7Spielzeit").setScore(5);
+        o.getScore("§7 §8┃ §7OnlineTime").setScore(5);
         o.getScore("§7  §8» §3" + OnlineTimeAPI.getZeit(player.getUniqueId().toString()) + "§3h").setScore(4);
         o.getScore("§8§9§f§k§d").setScore(3);
         o.getScore("§7 §8┃ §7TeamSpeak").setScore(2);
