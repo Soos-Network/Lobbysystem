@@ -17,7 +17,7 @@ public class Gadgets implements Listener {
     private LobbySystemWS main;
     private Inventory inv;
 
-    String prefix = ChatColor.RED + "Wolfsucht Lobby " + ChatColor.GRAY + "| " + ChatColor.RESET;
+    String prefix = ChatColor.RED + "Soos Lobby " + ChatColor.GRAY + "| " + ChatColor.RESET;
 
     public Gadgets(LobbySystemWS main){
         this.main = main;
@@ -54,7 +54,7 @@ public class Gadgets implements Listener {
                 }else if (material == Material.BARRIER){
                     p.getInventory().setItem(4, Creator.itemcreator(Material.BARRIER, "§fKein Gadget ausgewählt", 1, (short)0, null));
                 }else {
-                    p.sendMessage(prefix + ChatColor.RED + "Dieses Gadget ist noch in der Entwicklung...");
+                    p.sendMessage(prefix + ChatColor.RED + "Gadget coming soon");
                 }
                 p.closeInventory();
                 p.updateInventory();
