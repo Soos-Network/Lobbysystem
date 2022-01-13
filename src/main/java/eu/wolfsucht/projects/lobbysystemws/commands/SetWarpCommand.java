@@ -15,7 +15,7 @@ import java.util.Locale;
 
 public class SetWarpCommand implements CommandExecutor {
 
-    String prefix = ChatColor.RED + "Wolfsucht Lobby " + ChatColor.GRAY + "| " + ChatColor.RESET;
+    String prefix = ChatColor.RED + "Soos Lobby " + ChatColor.GRAY + "| " + ChatColor.RESET;
 
     public SetWarpCommand(LobbySystemWS main){
         Bukkit.getPluginCommand("setwarp").setExecutor(this);
