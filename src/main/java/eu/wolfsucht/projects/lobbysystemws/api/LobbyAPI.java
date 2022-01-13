@@ -33,7 +33,7 @@ public class LobbyAPI {
         s.registerNewObjective("board", "dummy");
         Objective o = s.getObjective("board");
         o.setDisplaySlot(DisplaySlot.SIDEBAR);
-        o.setDisplayName("§7 §8- §c§lWOLFSUCHT §8- §7");
+        o.setDisplayName("§7 §8- §c§lSOOS §8- §7");
         o.getScore("§9§8§9§7§e§7").setScore(18);
         o.getScore("§7 §8┃ §7Rank").setScore(17);
         if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("default")) {
@@ -71,16 +71,18 @@ public class LobbyAPI {
         }
         o.getScore("§7§8§9§a§e§f").setScore(15);
         o.getScore("§7 §8┃ §7Coins").setScore(11);
-        o.getScore("§7  §8» §6" + CoinsSystem.getApi().getCoins(player)).setScore(10);
+        //o.getScore("§7  §8» §6" + CoinsSystem.getApi().getCoins(player)).setScore(10);
+        o.getScore("§7  §8» §6 Coming Soon";
         o.getScore("§8§9").setScore(9);
         o.getScore("§7 §8┃ §7Players").setScore(8);
         o.getScore("§7  §8» §c"  + Bukkit.getServer().getOnlinePlayers().size()).setScore(7);
         o.getScore("§8§9§f§m").setScore(6);
         o.getScore("§7 §8┃ §7OnlineTime").setScore(5);
-        o.getScore("§7  §8» §3" + OnlineTimeAPI.getZeit(player.getUniqueId().toString()) + "§3h").setScore(4);
+        //o.getScore("§7  §8» §3" + OnlineTimeAPI.getZeit(player.getUniqueId().toString()) + "§3h").setScore(4);
+        o.getScore("§7  §8» §6 Coming Soon";
         o.getScore("§8§9§f§k§d").setScore(3);
-        o.getScore("§7 §8┃ §7TeamSpeak").setScore(2);
-        o.getScore("§7  §8» §fts.wolfsucht.eu").setScore(1);
+        o.getScore("§7 §8┃ §7 Discord").setScore(2);
+        o.getScore("§7  §8» §f Link will added soon").setScore(1);
 
         player.setScoreboard(s);
 
