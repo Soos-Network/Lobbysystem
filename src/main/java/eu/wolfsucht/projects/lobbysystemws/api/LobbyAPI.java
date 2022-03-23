@@ -1,9 +1,7 @@
 package eu.wolfsucht.projects.lobbysystemws.api;
 
-import eu.wolfsucht.projects.coinssystem.CoinsSystem;
+
 import eu.wolfsucht.projects.lobbysystemws.inventorys.Creator;
-import net.luckperms.api.LuckPermsProvider;
-import onlinetime.utils.OnlineTimeAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -36,50 +34,42 @@ public class LobbyAPI {
         o.setDisplayName("§7 §8- §c§lSOOS §8- §7");
         o.getScore("§9§8§9§7§e§7").setScore(18);
         o.getScore("§7 §8┃ §7Rank").setScore(17);
-        if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("default")) {
+        if (player.hasPermission("Prefix.Player")) {
             o.getScore("§7  §8» §9Spieler").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("Prime")) {
-            o.getScore("§7  §8» §6§lPRIME").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("Hydra")) {
-            o.getScore("§7  §8» §b§lHYDRA").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("Wolf")) {
-            o.getScore("§7  §8» §c§lWOLF").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("Vip")) {
-            o.getScore("§7  §8» §5§lVIP").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("test-builder")) {
-            o.getScore("§7  §8» §2T-Builder").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("test-supporter")) {
-            o.getScore("§7  §8» §9T-Supporter").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("test-moderator")) {
-            o.getScore("§7  §8» §cT-Moderator").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("test-developer")) {
-            o.getScore("§7  §8» §3T-Developer").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("builder")) {
+        } else if (player.hasPermission("Prefix.VIP")) {
+            o.getScore("§7  §8» §6§lVIP").setScore(16);
+        } else if (player.hasPermission("Prefix.JrBuilder")) {
+            o.getScore("§7  §8» §2JrBuilder").setScore(16);
+        } else if (player.hasPermission("Prefix.JrSupporter")) {
+            o.getScore("§7  §8» §9JrSupporter").setScore(16);
+        } else if (player.hasPermission("Prefix.JrModerator")) {
+            o.getScore("§7  §8» §cJrModerator").setScore(16);
+        } else if (player.hasPermission("Prefix.JrDeveloper")) {
+            o.getScore("§7  §8» §JrDeveloper").setScore(16);
+        } else if (player.hasPermission("Prefix.Builder")) {
             o.getScore("§7  §8» §2Builder").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("Supporter")) {
+        } else if (player.hasPermission("Prefix.Supporter")) {
             o.getScore("§7  §8» §9Supporter").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("Moderator")) {
+        } else if (player.hasPermission("Prefix.Moderator")) {
             o.getScore("§7  §8» §cModerator").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("developer")) {
+        } else if (player.hasPermission("Prefix.Developer")) {
             o.getScore("§7  §8» §3Developer").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("content")) {
-            o.getScore("§7  §8» §cContent").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("leitung")) {
+        } else if (player.hasPermission("Prefix.TeamAdmin")) {
             o.getScore("§7  §8» §4Lead").setScore(16);
-        } else if (LuckPermsProvider.get().getUserManager().getUser(player.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("admin")) {
+        } else if (player.hasPermission("Prefix.Admin")) {
             o.getScore("§7  §8» §4Admin").setScore(16);
         }
         o.getScore("§7§8§9§a§e§f").setScore(15);
         o.getScore("§7 §8┃ §7Coins").setScore(11);
         //o.getScore("§7  §8» §6" + CoinsSystem.getApi().getCoins(player)).setScore(10);
-        o.getScore("§7  §8» §6 Coming Soon";
+        o.getScore("§7  §8» §6 Coming Soon");
         o.getScore("§8§9").setScore(9);
         o.getScore("§7 §8┃ §7Players").setScore(8);
         o.getScore("§7  §8» §c"  + Bukkit.getServer().getOnlinePlayers().size()).setScore(7);
         o.getScore("§8§9§f§m").setScore(6);
         o.getScore("§7 §8┃ §7OnlineTime").setScore(5);
         //o.getScore("§7  §8» §3" + OnlineTimeAPI.getZeit(player.getUniqueId().toString()) + "§3h").setScore(4);
-        o.getScore("§7  §8» §6 Coming Soon";
+        o.getScore("§7  §8» §6 Coming Soon");
         o.getScore("§8§9§f§k§d").setScore(3);
         o.getScore("§7 §8┃ §7 Discord").setScore(2);
         o.getScore("§7  §8» §f Link will added soon").setScore(1);

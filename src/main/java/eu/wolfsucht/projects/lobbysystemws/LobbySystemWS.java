@@ -23,6 +23,7 @@ public final class LobbySystemWS extends JavaPlugin {
         new SetWarpCommand(this);
 
         teleportUtils = new TeleportUtils(this);
+        System.out.println("Enabled Lobbysystem!");
     }
 
     @Override
