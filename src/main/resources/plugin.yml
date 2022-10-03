@@ -1,9 +1,8 @@
-name: Lobbysystem Wolfuscht
-version: '${project.version}'
-main: lobbysystem.wolfuscht.lobbysystemwolfuscht.LobbysystemWolfuscht
-api-version: 1.17
-authors: [CheckerPhil]
-description: Lobbysystem
+name: LobbysystemWolfsucht
+version: 1.0
+main: eu.wolfsucht.projects.lobbysystemws.LobbySystemWS
+api-version: 1.18
+author: CheckerPhil
 commands:
     setwarp:
 

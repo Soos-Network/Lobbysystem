@@ -1,8 +1,6 @@
 package eu.wolfsucht.projects.lobbysystemws.commands;
 
 import eu.wolfsucht.projects.lobbysystemws.LobbySystemWS;
-import net.luckperms.api.LuckPerms;
-import net.luckperms.api.LuckPermsProvider;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -24,7 +22,7 @@ public class SetWarpCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         Player p = (Player) sender;
-        if (LuckPermsProvider.get().getUserManager().getUser(p.getUniqueId()).getPrimaryGroup().equalsIgnoreCase("Admin")){
+        if (p.hasPermission("Lobbysystem.SetWarp")){
             if(args.length == 3){
                 String name = args[0];
                 Material material;
